@@ -13,24 +13,6 @@ RF24 radio(7, 8); // CE, CSN
 
 const byte address[6] = "00001";
 int joys[2];
-//byte wewe;
-//
-//struct MyData {
-//  int state1;
-//  int state2;
-//  int state3;
-//  int state4;
-//  };
-//  MyData data;
-//  int vel;
-//
-//void resetData() 
-//{
-//  data.state1 = 0;
-//  data.state2 = 0;
-//  data.state3 = 0;
-//  data.state4 = 0;
-//}
 
 void setup() {
  // pinMode(4, OUTPUT);
@@ -55,12 +37,12 @@ void loop() {
 //   while (!radio.available());
   
   if (radio.available()) {
-//    while (radio.available()) {
+
      
       radio.read(&joys ,sizeof(joys));
         Move();
      
-//     }
+
   }
 
 
@@ -75,21 +57,4 @@ void Move()
 
   }
 
-
-//    char text[32] = "";
-//    radio.read(&text, sizeof(text));
-//    Serial.println(text);
-
-
-
-      
-//    radio.read(&buttonState, sizeof(buttonState));
-//      if (buttonState == HIGH) {
-//        digitalWrite(led, HIGH);
-//      }
-//      else {
-//        digitalWrite(led, LOW);
-//      }
-//
-//
-// 
+   
